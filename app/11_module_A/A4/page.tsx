@@ -13,8 +13,9 @@ const handleSearch = () => {
         
         for (let  i =0; i < searchParams.length; i++) {
         for (let j = 0; j < ourText.length; j++) {
-            if (searchParams[i] === ourText[j]) {
-                ourText[i] = "<span style='background-color: red;'>"+ourText[i]+"</span>";
+            console.log(searchParams[i],ourText[j])
+            if (searchParams[i].trim() == ourText[j].trim()) {
+                ourText[j] = "<span style='background-color: red;'>"+ourText[j]+"</span>";
             }
         }
     }
@@ -27,7 +28,12 @@ const handleSearch = () => {
     }
 }
 
-const handleClear = () => {}
+
+const handleClear = () => {
+    if (inputRef.current) {
+        inputRef.current.value = "";
+    }
+}
 
 return <div className="bg-emerald-900 h-screen w-screen grid place-items-center">
       <div className="rounded-xl bg-white flex flex-col w-full max-w-1/2 p-10 justify-center items-center gap-3">
