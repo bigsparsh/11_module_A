@@ -15,7 +15,7 @@ const handleSearch = () => {
         for (let j = 0; j < ourText.length; j++) {
             console.log(searchParams[i],ourText[j])
             if (searchParams[i].trim() == ourText[j].trim()) {
-                ourText[j] = "<span style='background-color: red;'>"+ourText[j]+"</span>";
+                ourText[j] = "<span style='background-color: rgb("+rand(0,255)+", "+rand(0, 255)+",  "+rand(0, 255)+");'>"+ourText[j]+"</span>";
             }
         }
     }
@@ -28,6 +28,9 @@ const handleSearch = () => {
     }
 }
 
+const rand = (min: number, max: number) => {
+    return Math.round(Math.random() *(max - min)) + min;
+}
 
 const handleClear = () => {
     if (inputRef.current) {
