@@ -9,8 +9,21 @@ const A4 = () => {
 const handleSearch = () => {
     if (paraRef.current && inputRef.current) {
         const searchParams = inputRef.current.value.split(", ");
-        const ourText: string = paraRef.current.innerText;
+        const ourText = paraRef.current.innerText.split(" ");
         
+        for (let  i =0; i < searchParams.length; i++) {
+        for (let j = 0; j < ourText.length; j++) {
+            if (searchParams[i] === ourText[j]) {
+                ourText[i] = "<span style='background-color: red;'>"+ourText[i]+"</span>";
+            }
+        }
+    }
+    let x = "";
+    for (let j = 0; j < ourText.length; j++) {
+        x += ourText[j] + " ";
+    }
+    paraRef.current.innerHTML = x;
+
     }
 }
 
