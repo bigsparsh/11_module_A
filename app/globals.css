@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@property --gradSize {
-    syntax: '<percentage>';
-    inital: "10%";
-    inherits: false;
-}
 
 @keyframes spin {
     from {
