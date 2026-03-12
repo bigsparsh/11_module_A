@@ -9,7 +9,7 @@ import a6_mock from "../../public/a6_mock.png";
 
 const Index = () => {
 
-    return <div className="grid grid-cols-3 px-10 m-0 w-screen *:text-white bg-emerald-900" >
+    return <div className="grid grid-cols-3 px-10 m-0 w-screen *:text-white bg-emerald-900 overflow-clip" >
         <Link href={"/11_module_A/A1"} className="flex flex-col w-[300px] h-[550px] justify-center items-center gap-3 border border-emerald-100 rounded-xl">
 <img src={a1_mock.src} />
 <h1 className="font-bold">Module A1
