@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@property --gradSize {
+    syntax: '<percentage>';
+    inital: "10%";
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+                transform: rotateX(0deg)  rotateZ(0deg);
+
+    }
+    to {
+        /* rotate: 360deg; */
+                transform: rotateX(360deg)  rotateZ(360deg);
+    }
+}
+*{
+    transition: 1s;
+}
